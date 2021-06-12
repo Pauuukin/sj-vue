@@ -9,6 +9,8 @@
         <div class="row">
           <div class="col-lg-3"></div>
           <div class="col-lg-6">
+            <!--      Форма      -->
+
             <form>
               <!-- ФИО -->
               <div class="mb-3">
@@ -17,7 +19,9 @@
                   type="text"
                   class="form-control"
                   id="name"
+                  required=""
                   aria-describedby="Ваше ФИО"
+                  v-model="FIO"
                 />
                 <div id="nameHelp" class="form-text">
                   Чтобы не перепутать расстановку напитков на столах, укажите,
@@ -27,7 +31,9 @@
               </div>
               <!-- Еда -->
               <div class="mb-3" id="v-model-radiobutton">
-                <label for="food" class="form-label">Выберите горячее блюдо</label>
+                <label for="food" class="form-label"
+                  >Выберите горячее блюдо</label
+                >
                 <div class="form-check form-switch mb-2">
                   <input
                     class="form-check-input ml-2"
@@ -66,13 +72,13 @@
                   <label class="form-check-label" for="exampleRadios3">
                     Рыба
                   </label>
-                  <br>
+                  <br />
                   <span>Выбрано: {{ picked }}</span>
                 </div>
               </div>
               <!-- Крепкий алкоголь  -->
-              <div class="mb-3" >
-                <label  class="form-label">Крепкий алкоголь</label>
+              <div class="mb-3">
+                <label class="form-label">Крепкий алкоголь</label>
                 <div class="form-check form-switch mb-2">
                   <input
                     class="form-check-input"
@@ -81,9 +87,7 @@
                     value="Ром / Виски"
                     v-model="checked"
                   />
-                  <label class="form-check-label" 
-                    >Ром / Виски</label
-                  >
+                  <label class="form-check-label">Ром / Виски</label>
                 </div>
                 <div class="form-check form-switch mb-2">
                   <input
@@ -93,7 +97,7 @@
                     value="Водка"
                     v-model="checked"
                   />
-                  <label class="form-check-label" >Водка</label>
+                  <label class="form-check-label">Водка</label>
                 </div>
                 <div class="form-check form-switch mb-2">
                   <input
@@ -103,7 +107,7 @@
                     v-model="checked"
                     value="Джин"
                   />
-                  <label class="form-check-label" >Джин</label>
+                  <label class="form-check-label">Джин</label>
                 </div>
                 <div class="form-check form-switch mb-2">
                   <input
@@ -113,7 +117,7 @@
                     v-model="checked"
                     value="Абсент"
                   />
-                  <label class="form-check-label" >Абсент</label>
+                  <label class="form-check-label">Абсент</label>
                 </div>
                 <div id="alcoholHelp" class="form-text">
                   Выберете не более двух позиций.
@@ -121,7 +125,6 @@
                 <span>Отмеченные позиции: {{ checked }}</span>
               </div>
 
-              
               <!-- Трансфер -->
               <div class="mb-3">
                 <label for="transfer" class="form-label"
@@ -131,6 +134,7 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
+                    required=""
                     id="alcohol"
                     v-model="transfer"
                   />
@@ -152,6 +156,7 @@
                     name="Красное сухое\полуcухое"
                     id="vine1"
                     value="Красное сухое\полуcухое"
+                    
                     v-model="vine"
                   />
                   <label class="form-check-label" for="exampleRadios1">
@@ -165,6 +170,7 @@
                     name="Красное полуcладкое"
                     id="vine2"
                     value="Красное полуcладкое"
+                    
                     v-model="vine"
                   />
                   <label class="form-check-label" for="exampleRadios2">
@@ -197,10 +203,15 @@
                     Белое полусладкое
                   </label>
                 </div>
-                <span>Выбрано: {{vine}}</span>
+                <span>Выбрано: {{ vine }}</span>
               </div>
 
-              <button type="submit" class="btn btn-primary">Отправить</button>
+              <button type="button" 
+              class="btn btn-primary"
+              @click="sendDate"
+              >
+                Отправить
+                </button>
             </form>
           </div>
           <div class="col-lg-3"></div>
@@ -223,20 +234,40 @@ export default {
   },
   data() {
     return {
-      picked: '',
+      FIO: "",
+      picked: "",
       checked: [],
-      transfer: '',
-      vine: ''
-
-
-    }
-  }
-}
+      transfer: "",
+      vine: "",
+    };
+  },
+  methods: {
+    async sendDate() {
+      let data = {
+        name: this.FIO,
+        transfer: this.transfer,
+        alcohol: this.checked.join(','),
+        vine: this.vine,
+        food: this.picked,
+      }
+      fetch(`${this.$store.getters.getServerUrl}/choice/`,
+        {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        }
+      ).then(response => {
+        console.log(response.json())
+      })
+    },
+  },
+};
 </script>
 
 <style scoped>
 .form-label {
   font-size: 24px;
 }
-
 </style>
