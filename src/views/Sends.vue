@@ -19,15 +19,16 @@
                   type="text"
                   class="form-control"
                   id="name"
-                  required=""
                   aria-describedby="Ваше ФИО"
                   v-model="FIO"
+                  required
                 />
                 <div id="nameHelp" class="form-text">
                   Чтобы не перепутать расстановку напитков на столах, укажите,
                   пожалуйста, ваше ФИО так, чтобы молодожены смогли вас
                   идентифицировать.
                 </div>
+                <span>Выбрано: {{ FIO }}</span>
               </div>
               <!-- Еда -->
               <div class="mb-3" id="v-model-radiobutton">
@@ -40,11 +41,11 @@
                     type="radio"
                     name="food"
                     id="food1"
-                    value="Шашлык"
+                    value="Люля-кебаб из говядины"
                     v-model="picked"
                   />
                   <label class="form-check-label" for="exampleRadios1">
-                    Шашлык
+                    Люля-кебаб из говядины
                   </label>
                 </div>
                 <div class="form-check form-switch mb-2">
@@ -53,11 +54,11 @@
                     type="radio"
                     name="food"
                     id="food2"
-                    value="Курица"
+                    value="Шашлык из курицы"
                     v-model="picked"
                   />
                   <label class="form-check-label" for="exampleRadios2">
-                    Курица
+                    Шашлык из курицы
                   </label>
                 </div>
                 <div class="form-check form-switch mb-2">
@@ -66,11 +67,11 @@
                     type="radio"
                     name="food"
                     id="food3"
-                    value="Рыба"
+                    value="Шашлык из свинины"
                     v-model="picked"
                   />
                   <label class="form-check-label" for="exampleRadios3">
-                    Рыба
+                    Шашлык из свинины
                   </label>
                   <br />
                   <span>Выбрано: {{ picked }}</span>
@@ -78,7 +79,9 @@
               </div>
               <!-- Крепкий алкоголь  -->
               <div class="mb-3">
-                <label class="form-label">Крепкий алкоголь</label>
+                <label class="form-label"
+                  >Если планируете пить крепкий алкоголь:</label
+                >
                 <div class="form-check form-switch mb-2">
                   <input
                     class="form-check-input"
@@ -115,9 +118,9 @@
                     type="checkbox"
                     id="alcohol3"
                     v-model="checked"
-                    value="Абсент"
+                    value="Не планирую"
                   />
-                  <label class="form-check-label">Абсент</label>
+                  <label class="form-check-label">Не планирую</label>
                 </div>
                 <div id="alcoholHelp" class="form-text">
                   Выберете не более двух позиций.
@@ -134,12 +137,11 @@
                   <input
                     class="form-check-input"
                     type="checkbox"
-                    required=""
                     id="alcohol"
                     v-model="transfer"
                   />
                   <label class="form-check-label" for="flexSwitchCheckChecked"
-                    >Активируйте, если нужен</label
+                    >Отключите, если не нужен</label
                   >
                 </div>
                 <span>Трансфер: {{ transfer }}</span>
@@ -156,7 +158,6 @@
                     name="Красное сухое\полуcухое"
                     id="vine1"
                     value="Красное сухое\полуcухое"
-                    
                     v-model="vine"
                   />
                   <label class="form-check-label" for="exampleRadios1">
@@ -170,7 +171,6 @@
                     name="Красное полуcладкое"
                     id="vine2"
                     value="Красное полуcладкое"
-                    
                     v-model="vine"
                   />
                   <label class="form-check-label" for="exampleRadios2">
@@ -205,13 +205,26 @@
                 </div>
                 <span>Выбрано: {{ vine }}</span>
               </div>
+              <div class="mb-3">
+                <label for="name" class="form-label"
+                  >У меня есть аллергия на:</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="У меня есть аллергия на:"
+                  v-model="allergy"
+                />
+                <div id="nameHelp" class="form-text">
+                  Впишите в данное поле продукты, на которые у вас есть
+                  аллергия.
+                </div>
+              </div>
 
-              <button type="button" 
-              class="btn btn-primary"
-              @click="sendDate"
-              >
+              <button type="button" class="btn btn-primary" @click="sendDate">
                 Отправить
-                </button>
+              </button>
             </form>
           </div>
           <div class="col-lg-3"></div>
@@ -232,39 +245,52 @@ export default {
     Nav,
     Footer,
   },
+
   data() {
     return {
       FIO: "",
       picked: "",
       checked: [],
-      transfer: "",
+      transfer: "True",
       vine: "",
+      allergy: "",
     };
   },
   methods: {
+    
     async sendDate() {
+      
       let data = {
         name: this.FIO,
         transfer: this.transfer,
-        alcohol: this.checked.join(','),
+        alcohol: this.checked.join(","),
         vine: this.vine,
         food: this.picked,
-      }
-      fetch(`${this.$store.getters.getServerUrl}/choice/`,
-        {
+        allergy: this.allergy,
+      };
+
+        if(data.name){
+        fetch(`${this.$store.getters.getServerUrl}/choice/`, {
           method: "POST",
           headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify(data),
+        })
+          .then((response) => {
+            alert("Вы успешно отправили данные!");
+          })
+          .then((response) => {
+            this.$router.push("/");
+          });
+        } else {
+          alert("Введите имя")
         }
-      ).then(response => {
-        console.log(response.json())
-      })
     },
   },
 };
 </script>
+
 
 <style scoped>
 .form-label {

@@ -4,29 +4,49 @@
     <div class="container">
       <div class="section">
         <div class="row">
-          <h2 class="block-title">Как мы познакомились?</h2>
-          <div class="col">
+          <h2 class="block-title">Наша история</h2>
             <hr />
-            <div class="block-vert-line">
-              <p>
-                Lorem Ipsum - это текст-"рыба", часто используемый в печати и
-                вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для
-                текстов на латинице с начала XVI века. В то время некий
-                безымянный печатник создал большую коллекцию размеров и форм
-                шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem
-                Ipsum не только успешно пережил без заметных изменений пять
-                веков, но и перешагнул в электронный дизайн. Его популяризации в
-                новое время послужили публикация листов Letraset с образцами
-                Lorem Ipsum в 60-х годах и, в более недавнее время, программы
-                электронной вёрстки типа Aldus PageMaker, в шаблонах которых
-                используется Lorem Ipsum.
-              </p>
-            </div>
-          </div>
+            <table class="table table-borderless text-center">
+              <tr>
+                <td colspan="2">
+                 
+                  <p class="text-center p-size"><u>Знакомство</u></p>
+       
+                  </td>
+              </tr>
+              <tr >
+                <td><img src="../assets/icons/1.png" class="img float-left" style="max-width: 150px; height: auto;"></td>
+                <td class=""><p class="ms-4">Мы познакомились в баре на дне рождении общей подруги. Знакомство сначала не задалось.
+                   А потом мы выпили. Встречаться стали только спустя полгода, потому что Саша ждал, пока Жене исполнится 16 лет.</p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p class="text-center p-size"><u>Начало отношений</u></p></td>
+              </tr>
+              <tr>
+                <td><img src="../assets/icons/2.png" class="img float-left" style="max-width: 150px; height: auto;"></td>
+                <td><p class="ms-4">Мы выбрали этот день началом наших отношений, потому что это для Жени день смеха, а для Саши — день дурака.</p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p class="text-center p-size"><u>Первое путешествие</u></p></td>
+              </tr>
+              <tr>
+                <td><img src="../assets/icons/4.png" class="img float-left" style="max-width: 150px; height: auto;"></td>
+                <td><p class="ms-4">В первый совместный отпуск полетели на Кипр. Там было чудесно, но, к сожалению, пришлось вернуться 
+                  в Россию. Ведь мы сходили в казино и у нас закончились деньги.</p></td>
+              </tr>
+              <tr>
+                <td colspan="2"><p class="text-center p-size"><u>Предложение</u></p></td>
+              </tr>
+              <tr>
+                <td><img src="../assets/icons/3.png" class="img float-left" style="max-width: 150px; height: auto;"></td>
+                <td><p class="ms-4">Саша целый год прорабатывал план по захвату Жени. Решил сделать предложение на катере во время заката.
+                   Чтобы она точно не смогла отказаться. Ну, а дальше вы и сами всё знаете…</p></td>
+              </tr>
+              
+            </table>
         </div>
       </div>
       <div class="section">
-        <a name="photo"></a>
         <div class="row">
           <h2 class="block-title">Фотогалерея</h2>
           <hr />
@@ -66,20 +86,13 @@
       </div>
       <div class="section">
         <div class="row">
-          <h2 class="block-title">Еще информация</h2>
+          <h2 class="block-title">Дресс-код</h2>
           <div class="col">
             <hr />
             <p>
-              Рыбный текст – это текст, выполняющий исключительно утилитарную
-              функцию. Он не вписывается в контекст сайта, на котором
-              используется, и нужен только для заполнения пространства. Зачастую
-              такой текст даже не имеет четкого смысла и представляет собой
-              набор слов и фраз, которые вроде бы формируют грамматически верные
-              конструкции, но какой-либо мысли в них не прослеживается. Рыбу
-              используют вебмастера, веб-дизайнеры и разработчики, у которых нет
-              под рукой готового текста, но нужно как-то оценить внешний вид
-              контента на готовой странице. Оценить, насколько хорошо он
-              вписывается в дизайн и не «плывет» ли верстка.
+              Приветствуется коктейльный стиль. Мужчины – в рубашках и брюках (либо костюмах), 
+              девушки – в платьях. Будем рады, если вы поддержите пастельные оттенки. Просьба к дамам: 
+              <u>не приходить в чёрных, белых и красных платьях.</u>
             </p>
           </div>
         </div>
@@ -103,7 +116,8 @@
               </div>
               <div class="col-lg-10">
                 <p class="text-center">
-                  улица Кораблестроителей, 38к3 Санкт-Петербург, Россия, 199155
+                  <u>Загородный клуб «Forest Symphony»</u><br>
+                  Ленинградская область, 30-й километр Новоприозерского шоссе
                 </p>
               </div>
             </div>
@@ -142,11 +156,14 @@
               </div>
               <div class="col-lg-10">
                 <div class="ul">
-                  <li>Теплая одежда</li>
-                  <li>Кальяны</li>
-                  <li>Табак для кальянов</li>
-                  <li>Угли для кальянов</li>
-                  <li>Плитки для углей</li>
+                  <li>Девушкам на высоких каблуках - сменную обувь (чтобы было удобнее гулять по площадке и танцевать до упаду)</li>
+                  <li>Вечером может быть прохладно, захватите пиджак\лёгкую куртку</li>
+                  <li>В зависимости от погоды – может пригодиться и зонт</li>
+                 
+
+
+
+
                 </div>
               </div>
             </div>
@@ -156,10 +173,7 @@
             <div class="row">
               <div class="col-lg-10">
                 <p class="text-center">
-                  Suspendisse enim sapien, dignissim nec eros sit amet,
-                  tincidunt lobortis ex. Nulla ullamcorper eros non condimentum
-                  varius. Aliquam et lorem tortor. Nulla lacus nisi, consequat
-                  vel vestibulum ac, dignissim vitae ligula.
+                 Большая просьба: не приходить на свадьбу с цветами. Можете заменить букет на бутылочку хорошего алкоголя <u>(лучше крепкого</u>) ;)
                 </p>
               </div>
               <div class="col-lg-2">
@@ -181,12 +195,12 @@
           <hr />
           <div class="col-lg-1"></div>
           <div class="col-lg-7">
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A39a12b545d1de173b46aadd1802e724e69b9a9ae9b6edae13aee164cbb14e575&amp;source=constructor"
-              width="100%"
-              height="490"
-              frameborder="0"
-            ></iframe>
+            <iframe 
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A634fbf772ac1c239acbd9075b13b0257d30476692e3eb15e5c95d8497d06d52a&amp;source=constructor" 
+            width="100%" 
+            height="462" 
+            frameborder="0">
+            </iframe>
           </div>
           <div class="col-lg-1"></div>
           <div class="col-lg-3">
@@ -208,7 +222,7 @@
               <div class="col-lg-6">
                 <p>
                   Нам будет приятно, если фото и видео с нашей свадьбы вы будете
-                  выкладывать под данным хештэгом
+                  выкладывать под данным хэштэгом
                 </p>
                 <div class="row">
                   <div class="col-lg-3"></div>
@@ -218,7 +232,7 @@
                         <td>
                           <img src="../assets/images/inst.png" style="height: 64px" />
                         </td>
-                        <td style="color: blue">#FAMikhirevs <br /></td>
+                        <td style="color: blue">#АЕннаясвадьба  <br /></td>
                       </tr>
                     </table>
                   </div>
@@ -246,6 +260,7 @@
 <script>
 import Footer from "../components/Footer";
 import HeadMain from "../components/HeadMain";
+import $ from 'jquery';
 
 export default {
   name: "Home",
@@ -253,11 +268,27 @@ export default {
     Footer,
     HeadMain,
   },
+  mounted (){
+    $('.card img').click(function clich() {
+      let src = $(this).attr('src');
+      $('.modalCustom img').attr('src',src);
+      $('.modalCustom').fadeIn();    
+    }),
+    $('.close').click(function() {
+      $('.modalCustom').fadeOut();
+    })
+  }
 };
+
+
+
 </script>
 
 <style scoped>
 .section-color {
   background-color: #e5ddf1;
+}
+.p-size {
+  font-size: 30px;
 }
 </style>

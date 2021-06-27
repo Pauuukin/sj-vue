@@ -1,14 +1,16 @@
 <template>
   <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Главная</a
-      >
+      <router-link to="/" class="nav-link">Главная</router-link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#photo">Фотогалерея</a>
+      <router-link to="/gallery" class="nav-link">Фотогалерея</router-link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#map">Место и время</a>
+      <router-link to="/sends" class="nav-link">Пожелания по меню</router-link>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#map"></a>
     </li>
   </ul>
 </template>

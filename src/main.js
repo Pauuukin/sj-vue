@@ -5,7 +5,9 @@ import store from './store'
 
 
 Vue.config.productionTip = false
-
+global.jQuery = require('jquery');
+var $ = global.jQuery;
+window.$ = $;
 
 new Vue({
   router,

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Nav from '../views/Sends.vue'
+import Sends from '../views/Sends.vue'
+import Gallery from '../views/Gallery.vue'
 
 Vue.use(VueRouter)
 
@@ -13,8 +14,13 @@ const routes = [
   },
   {
     path :'/sends',
-    name: 'Nav',
-    component: Nav
+    name: 'Sends',
+    component: Sends
+  },
+  {
+    path :'/gallery',
+    name: 'Gallery',
+    component: Gallery
   },
   
 ]
