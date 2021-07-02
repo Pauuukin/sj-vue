@@ -8,8 +8,8 @@
         <router-link to="/gallery" class="nav-link link-light">Фотогалерея</router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/sends" class="nav-link link-light"
-          >Пожелания по меню</router-link
+        <router-link to="/sends" class="nav-link link-light">
+          Пожелания по меню</router-link
         >
       </li>
     </ul>
@@ -24,11 +24,12 @@
           text-center
         "
       >
+      
         <div class="col">
-          <h1>
-            <b> <br /><br /><br /><br />Женя + Саша</b> <br /><br /><br />
+          <h1 class="">
+            <b> <br /><br /><br /><br />Женя + Саша</b> <br /><br /><br /><br>
           </h1>
-          <p > Мы приглашаем вас на нашу свадьбу!  </p>
+          <p class="shadowtext mt-2">Мы приглашаем вас на нашу свадьбу!  </p>
         </div>
       </div>
     </div>
@@ -48,7 +49,16 @@ a {
 }
 p {
   font-size: 60px;
-  color: white;
+  color: #0c592bfe;
+  
 
 }
+.shadowtext {
+    
+    color: #f5eccbfe; /* Белый цвет текста */
+ 
+
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+   }
 </style>

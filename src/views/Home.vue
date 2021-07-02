@@ -3,13 +3,6 @@
     <HeadMain />
     <div class="container">
       <div class="section">
-        <h2 class="block-title">Дорогие друзья!</h2>
-        <p class="text-center">
-          Мы приглашаем вас на свою свадьбу 29 июля
-        </p>
-
-      </div>
-      <div class="section">
         <div class="row">
           <h2 class="block-title">Наша история</h2>
             <hr />
@@ -199,7 +192,7 @@
           <h2 class="block-title">Карта</h2>
           <hr />
           <div class="col-lg-1"></div>
-          <div class="col-lg-7">
+          <div class="col-lg-6">
             <iframe 
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A634fbf772ac1c239acbd9075b13b0257d30476692e3eb15e5c95d8497d06d52a&amp;source=constructor" 
             width="100%" 
@@ -208,12 +201,12 @@
             </iframe>
           </div>
           <div class="col-lg-1"></div>
-          <div class="col-lg-3">
-            <h2>Как проехать?</h2>
-            <p>
-              Там сначала прямо потом направо поттом н алева потом прямо 2раза
-              потом дым увидишь это кальяны значит мы там тормози
-            </p>
+          <div class="col-lg-4">
+            <h2 class="text-center"><i>Трансфер</i></h2><br>
+            <span style="font-size: 24px; text-align: center">
+             <i> До “Forest Symphony” вас отвезёт комфортабельный автобус.<br><hr> Место сбора: метро Приморская. <br>
+              <b>Предварительно - в 14:20</b> </i>
+            </span>
           </div>
         </div>
       </div>

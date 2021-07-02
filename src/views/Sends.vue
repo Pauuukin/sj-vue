@@ -28,7 +28,6 @@
                   пожалуйста, ваше ФИО так, чтобы молодожены смогли вас
                   идентифицировать.
                 </div>
-                <span>Выбрано: {{ FIO }}</span>
               </div>
               <!-- Еда -->
               <div class="mb-3" id="v-model-radiobutton">
@@ -74,7 +73,6 @@
                     Шашлык из свинины
                   </label>
                   <br />
-                  <span>Выбрано: {{ picked }}</span>
                 </div>
               </div>
               <!-- Крепкий алкоголь  -->
@@ -125,7 +123,6 @@
                 <div id="alcoholHelp" class="form-text">
                   Выберете не более двух позиций.
                 </div>
-                <span>Отмеченные позиции: {{ checked }}</span>
               </div>
 
               <!-- Трансфер -->
@@ -144,7 +141,7 @@
                     >Отключите, если не нужен</label
                   >
                 </div>
-                <span>Трансфер: {{ transfer }}</span>
+
               </div>
 
               <!-- Вино -->
@@ -203,7 +200,6 @@
                     Белое полусладкое
                   </label>
                 </div>
-                <span>Выбрано: {{ vine }}</span>
               </div>
               <div class="mb-3">
                 <label for="name" class="form-label"
