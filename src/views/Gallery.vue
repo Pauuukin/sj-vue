@@ -11,21 +11,8 @@
                 <img :src="img.photos" alt="Snow" class="card-img-top" />
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="card">
-                <img src="http://127.0.0.1:8005/media/images/2.50fc8009.jpg" alt="Snow" class="card-img-top" />
-              </div>
-            </div>
-            <div class="col-lg-4" v-for="i in 3" :key="i">
-              <div class="card">
-                <img :src="i" alt="Snow" class="card-img-top" />
-              </div>
-            </div>
           </div>
-
-          
       </div>
-    <hr><hr>
     <br>
           
     </div>

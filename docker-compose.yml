@@ -1,0 +1,16 @@
+version: '3.7'
+
+services: 
+    vue:
+        container_name: sj_vue
+        build: 
+            context: .
+            dockerfile: Dockerfile
+        volumes: 
+            - '.:/app'
+            - '/app/node_modules'
+        ports:
+            - '8081:8080'
+
+            # 8081 - на хост машине, 8080 - в контейнере
+
