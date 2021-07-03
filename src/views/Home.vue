@@ -201,9 +201,9 @@
             </iframe>
           </div>
           <div class="col-lg-1"></div>
-          <div class="col-lg-4">
+          <div class="col-lg-4 text-center">
             <h2 class="text-center"><i>Трансфер</i></h2><br>
-            <span style="font-size: 24px; text-align: center">
+            <span style="font-size: 24px;">
              <i> До “Forest Symphony” вас отвезёт комфортабельный автобус.<br><hr> Место сбора: метро Приморская. <br>
               <b>Предварительно - в 14:20</b> </i>
             </span>
