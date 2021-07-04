@@ -1,11 +1,12 @@
 <template>
   <div>
     <HeadMain />
-    <div class="container">
+  
       <div class="section">
-        <div class="row">
+        <div class="container">
           <h2 class="block-title">Наша история</h2>
             <hr />
+            <div class="table-responsive">
             <table class="table table-borderless text-center">
               <tr>
                 <td colspan="2">
@@ -16,7 +17,7 @@
               </tr>
               <tr >
                 <td><img src="../assets/icons/1.png" class="img float-left" style="max-width: 150px; height: auto;"></td>
-                <td class=""><p class="ms-4">Мы познакомились в баре на дне рождении общей подруги. Знакомство сначала не задалось.
+                <td class=""><p class="ms-4">Мы познакомились в баре на дне рождения общей подруги. Знакомство сначала не задалось.
                    А потом мы выпили. Встречаться стали только спустя полгода, потому что Саша ждал, пока Жене исполнится 16 лет.</p></td>
               </tr>
               <tr>
@@ -44,8 +45,10 @@
               </tr>
               
             </table>
+            </div>
         </div>
       </div>
+      <div class="container">
       <div class="section">
         <div class="row">
           <h2 class="block-title">Фотогалерея</h2>
@@ -101,7 +104,7 @@
     <div class="section section-color">
       <div class="container">
         <div class="row">
-          <h2 class="block-title">Еще информация</h2>
+          <h2 class="block-title">Информация</h2>
           <hr />
           <div
             class="col-lg-6 py-5 border border-4 border-light rounded border-top-0 border-start-0"
@@ -230,7 +233,7 @@
                         <td>
                           <img src="../assets/images/inst.png" style="height: 64px" />
                         </td>
-                        <td style="color: blue">#АЕннаясвадьба  <br /></td>
+                        <td style="color: blue">#АЕннаяCвадьба  <br /></td>
                       </tr>
                     </table>
                   </div>

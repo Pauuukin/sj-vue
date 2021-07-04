@@ -5,7 +5,9 @@
         <router-link to="/" class="nav-link link-light">Главная</router-link>
       </li>
       <li class="nav-item">
-        <router-link to="/gallery" class="nav-link link-light">Фотогалерея</router-link>
+        <router-link to="/gallery" class="nav-link link-light"
+          >Фотогалерея</router-link
+        >
       </li>
       <li class="nav-item">
         <router-link to="/sends" class="nav-link link-light">
@@ -24,13 +26,17 @@
           text-center
         "
       >
-      
         <div class="col">
-          <h1 class="">
-            <b> <br /><br /><br /><br />Женя + Саша</b> <br /><br /><br /><br>
+          <h1 class="mt-5">
+            <br />
+            <b><br><br><br>Женя + Саша</b><br><br><br>
           </h1>
-          <p class="shadowtext mt-2">Мы приглашаем вас на нашу свадьбу!  </p>
         </div>
+        
+          <p class="shadowtext text-center">
+            Мы приглашаем вас на нашу свадьбу!
+          </p>
+      
       </div>
     </div>
   </div>
@@ -42,23 +48,18 @@ export default {};
 
 <style scoped>
 h1 {
-  font-size: 60px;
+  font-size: 3.75em;
 }
 a {
-  font-size: 30px;
+  font-size: 1.2em;
 }
 p {
-  font-size: 60px;
+  font-size: 4.5vw;
   color: #0c592bfe;
-  
-
 }
 .shadowtext {
-    
-    color: #f5eccbfe; /* Белый цвет текста */
- 
+  color: #f5eccbfe; /* Белый цвет текста */
 
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-
-   }
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+}
 </style>
